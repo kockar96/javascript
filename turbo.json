@@ -234,6 +234,14 @@
       "outputs": []
     },
     "//#test:integration:ap-flows": {
+      "dependsOn": [
+        "@clerk/backend#build",
+        "@clerk/clerk-js#build",
+        "@clerk/nextjs#build",
+        "@clerk/shared#build",
+        "@clerk/testing#build",
+        "@clerk/ui#build"
+      ],
       "env": [
         "CLEANUP",
         "CLERK_E2E_OAUTH_PROVIDER_CLIENT_SECRET",
@@ -243,22 +251,7 @@
         "INTEGRATION_INSTANCE_KEYS",
         "INTEGRATION_STAGING_INSTANCE_KEYS"
       ],
-      "inputs": [
-        "integration/**",
-        "packages/*/package.json",
-        "packages/*/src/**",
-        "packages/*/tsconfig.json",
-        "packages/*/tsconfig.build.json",
-        "packages/*/tsconfig.declarations.json",
-        "packages/*/tsdown.config.*",
-        "packages/*/tsup.config.*",
-        "packages/*/rspack.config.*",
-        "packages/*/vite.config.*",
-        "!packages/*/src/**/*.test.*",
-        "!packages/*/src/**/__tests__/**",
-        "!packages/*/src/**/__mocks__/**",
-        "!packages/*/src/**/__snapshots__/**"
-      ],
+      "inputs": ["integration/**", "!integration/playwright-report/**", "!integration/test-results/**"],
       "outputs": ["integration/playwright-report/**"],
       "outputLogs": "new-only"
     },
@@ -471,6 +464,14 @@
       "outputLogs": "new-only"
     },
     "//#test:integration:localhost": {
+      "dependsOn": [
+        "@clerk/backend#build",
+        "@clerk/clerk-js#build",
+        "@clerk/nextjs#build",
+        "@clerk/shared#build",
+        "@clerk/testing#build",
+        "@clerk/ui#build"
+      ],
       "env": [
         "CLEANUP",
         "CLERK_E2E_OAUTH_PROVIDER_CLIENT_SECRET",
@@ -481,26 +482,19 @@
         "INTEGRATION_STAGING_INSTANCE_KEYS",
         "NODE_EXTRA_CA_CERTS"
       ],
-      "inputs": [
-        "integration/**",
-        "packages/*/package.json",
-        "packages/*/src/**",
-        "packages/*/tsconfig.json",
-        "packages/*/tsconfig.build.json",
-        "packages/*/tsconfig.declarations.json",
-        "packages/*/tsdown.config.*",
-        "packages/*/tsup.config.*",
-        "packages/*/rspack.config.*",
-        "packages/*/vite.config.*",
-        "!packages/*/src/**/*.test.*",
-        "!packages/*/src/**/__tests__/**",
-        "!packages/*/src/**/__mocks__/**",
-        "!packages/*/src/**/__snapshots__/**"
-      ],
+      "inputs": ["integration/**", "!integration/playwright-report/**", "!integration/test-results/**"],
       "outputs": ["integration/playwright-report/**"],
       "outputLogs": "new-only"
     },
     "//#test:integration:sessions": {
+      "dependsOn": [
+        "@clerk/backend#build",
+        "@clerk/clerk-js#build",
+        "@clerk/nextjs#build",
+        "@clerk/shared#build",
+        "@clerk/testing#build",
+        "@clerk/ui#build"
+      ],
       "env": [
         "CLEANUP",
         "CLERK_E2E_OAUTH_PROVIDER_CLIENT_SECRET",
@@ -511,26 +505,19 @@
         "INTEGRATION_INSTANCE_KEYS",
         "NODE_EXTRA_CA_CERTS"
       ],
-      "inputs": [
-        "integration/**",
-        "packages/*/package.json",
-        "packages/*/src/**",
-        "packages/*/tsconfig.json",
-        "packages/*/tsconfig.build.json",
-        "packages/*/tsconfig.declarations.json",
-        "packages/*/tsdown.config.*",
-        "packages/*/tsup.config.*",
-        "packages/*/rspack.config.*",
-        "packages/*/vite.config.*",
-        "!packages/*/src/**/*.test.*",
-        "!packages/*/src/**/__tests__/**",
-        "!packages/*/src/**/__mocks__/**",
-        "!packages/*/src/**/__snapshots__/**"
-      ],
+      "inputs": ["integration/**", "!integration/playwright-report/**", "!integration/test-results/**"],
       "outputs": ["integration/playwright-report/**"],
       "outputLogs": "new-only"
     },
     "//#test:integration:sessions:staging": {
+      "dependsOn": [
+        "@clerk/backend#build",
+        "@clerk/clerk-js#build",
+        "@clerk/nextjs#build",
+        "@clerk/shared#build",
+        "@clerk/testing#build",
+        "@clerk/ui#build"
+      ],
       "env": [
         "CLEANUP",
         "CLERK_E2E_OAUTH_PROVIDER_CLIENT_SECRET",
@@ -541,26 +528,19 @@
         "INTEGRATION_INSTANCE_KEYS",
         "NODE_EXTRA_CA_CERTS"
       ],
-      "inputs": [
-        "integration/**",
-        "packages/*/package.json",
-        "packages/*/src/**",
-        "packages/*/tsconfig.json",
-        "packages/*/tsconfig.build.json",
-        "packages/*/tsconfig.declarations.json",
-        "packages/*/tsdown.config.*",
-        "packages/*/tsup.config.*",
-        "packages/*/rspack.config.*",
-        "packages/*/vite.config.*",
-        "!packages/*/src/**/*.test.*",
-        "!packages/*/src/**/__tests__/**",
-        "!packages/*/src/**/__mocks__/**",
-        "!packages/*/src/**/__snapshots__/**"
-      ],
+      "inputs": ["integration/**", "!integration/playwright-report/**", "!integration/test-results/**"],
       "outputs": ["integration/playwright-report/**"],
       "outputLogs": "new-only"
     },
     "//#test:integration:handshake": {
+      "dependsOn": [
+        "@clerk/backend#build",
+        "@clerk/clerk-js#build",
+        "@clerk/nextjs#build",
+        "@clerk/shared#build",
+        "@clerk/testing#build",
+        "@clerk/ui#build"
+      ],
       "env": [
         "CLEANUP",
         "CLERK_E2E_OAUTH_PROVIDER_CLIENT_SECRET",
@@ -571,26 +551,19 @@
         "INTEGRATION_INSTANCE_KEYS",
         "NODE_EXTRA_CA_CERTS"
       ],
-      "inputs": [
-        "integration/**",
-        "packages/*/package.json",
-        "packages/*/src/**",
-        "packages/*/tsconfig.json",
-        "packages/*/tsconfig.build.json",
-        "packages/*/tsconfig.declarations.json",
-        "packages/*/tsdown.config.*",
-        "packages/*/tsup.config.*",
-        "packages/*/rspack.config.*",
-        "packages/*/vite.config.*",
-        "!packages/*/src/**/*.test.*",
-        "!packages/*/src/**/__tests__/**",
-        "!packages/*/src/**/__mocks__/**",
-        "!packages/*/src/**/__snapshots__/**"
-      ],
+      "inputs": ["integration/**", "!integration/playwright-report/**", "!integration/test-results/**"],
       "outputs": ["integration/playwright-report/**"],
       "outputLogs": "new-only"
     },
     "//#test:integration:handshake:staging": {
+      "dependsOn": [
+        "@clerk/backend#build",
+        "@clerk/clerk-js#build",
+        "@clerk/nextjs#build",
+        "@clerk/shared#build",
+        "@clerk/testing#build",
+        "@clerk/ui#build"
+      ],
       "env": [
         "CLEANUP",
         "CLERK_E2E_OAUTH_PROVIDER_CLIENT_SECRET",
@@ -601,22 +574,7 @@
         "INTEGRATION_INSTANCE_KEYS",
         "NODE_EXTRA_CA_CERTS"
       ],
-      "inputs": [
-        "integration/**",
-        "packages/*/package.json",
-        "packages/*/src/**",
-        "packages/*/tsconfig.json",
-        "packages/*/tsconfig.build.json",
-        "packages/*/tsconfig.declarations.json",
-        "packages/*/tsdown.config.*",
-        "packages/*/tsup.config.*",
-        "packages/*/rspack.config.*",
-        "packages/*/vite.config.*",
-        "!packages/*/src/**/*.test.*",
-        "!packages/*/src/**/__tests__/**",
-        "!packages/*/src/**/__mocks__/**",
-        "!packages/*/src/**/__snapshots__/**"
-      ],
+      "inputs": ["integration/**", "!integration/playwright-report/**", "!integration/test-results/**"],
       "outputs": ["integration/playwright-report/**"],
       "outputLogs": "new-only"
     },
@@ -844,7 +802,15 @@
       "outputLogs": "new-only"
     },
     "//#test:integration:chrome-extension": {
-      "dependsOn": ["@clerk/nextjs#build"],
+      "dependsOn": [
+        "@clerk/backend#build",
+        "@clerk/chrome-extension#build",
+        "@clerk/clerk-js#build",
+        "@clerk/react#build",
+        "@clerk/shared#build",
+        "@clerk/testing#build",
+        "@clerk/ui#build"
+      ],
       "env": [
         "CLEANUP",
         "CLERK_E2E_OAUTH_PROVIDER_CLIENT_SECRET",
@@ -853,27 +819,19 @@
         "E2E_*",
         "INTEGRATION_INSTANCE_KEYS"
       ],
-      "inputs": [
-        "integration/**",
-        "packages/*/package.json",
-        "packages/*/src/**",
-        "packages/*/tsconfig.json",
-        "packages/*/tsconfig.build.json",
-        "packages/*/tsconfig.declarations.json",
-        "packages/*/tsdown.config.*",
-        "packages/*/tsup.config.*",
-        "packages/*/rspack.config.*",
-        "packages/*/vite.config.*",
-        "!packages/*/src/**/*.test.*",
-        "!packages/*/src/**/__tests__/**",
-        "!packages/*/src/**/__mocks__/**",
-        "!packages/*/src/**/__snapshots__/**"
-      ],
+      "inputs": ["integration/**", "!integration/playwright-report/**", "!integration/test-results/**"],
       "outputs": ["integration/playwright-report/**"],
       "outputLogs": "new-only"
     },
     "//#test:integration:electron": {
-      "dependsOn": ["@clerk/electron#build"],
+      "dependsOn": [
+        "@clerk/backend#build",
+        "@clerk/clerk-js#build",
+        "@clerk/electron#build",
+        "@clerk/shared#build",
+        "@clerk/testing#build",
+        "@clerk/ui#build"
+      ],
       "env": [
         "CLEANUP",
         "CLERK_E2E_OAUTH_PROVIDER_CLIENT_SECRET",
@@ -883,22 +841,7 @@
         "INTEGRATION_INSTANCE_KEYS",
         "INTEGRATION_STAGING_INSTANCE_KEYS"
       ],
-      "inputs": [
-        "integration/**",
-        "packages/*/package.json",
-        "packages/*/src/**",
-        "packages/*/tsconfig.json",
-        "packages/*/tsconfig.build.json",
-        "packages/*/tsconfig.declarations.json",
-        "packages/*/tsdown.config.*",
-        "packages/*/tsup.config.*",
-        "packages/*/rspack.config.*",
-        "packages/*/vite.config.*",
-        "!packages/*/src/**/*.test.*",
-        "!packages/*/src/**/__tests__/**",
-        "!packages/*/src/**/__mocks__/**",
-        "!packages/*/src/**/__snapshots__/**"
-      ],
+      "inputs": ["integration/**", "!integration/playwright-report/**", "!integration/test-results/**"],
       "outputs": ["integration/playwright-report/**"],
       "outputLogs": "new-only"
     },
