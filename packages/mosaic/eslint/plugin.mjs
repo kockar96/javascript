@@ -1,4 +1,11 @@
-import { forwardRefParts, noDynamicMessageCatalogs, noModelReactState, noRawInvoke, noRenderClock } from './rules.mjs';
+import {
+  forwardRefParts,
+  modelCallbacksReturnClerkCall,
+  noDynamicMessageCatalogs,
+  noModelReactState,
+  noRawInvoke,
+  noRenderClock,
+} from './rules.mjs';
 
 export default {
   rules: {
@@ -7,5 +14,6 @@ export default {
     'forward-ref-parts': forwardRefParts,
     'no-raw-invoke': noRawInvoke,
     'no-render-clock': noRenderClock,
+    'model-callbacks-return-clerk-call': modelCallbacksReturnClerkCall,
   },
 };

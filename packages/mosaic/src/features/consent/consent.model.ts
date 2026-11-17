@@ -2,7 +2,7 @@ import { getRedirectDisplay } from '@clerk/shared/internal/clerk-js/oauthConsent
 import { useClerk, useOAuthConsent, useSession } from '@clerk/shared/react';
 
 import { useMosaicEnvironment } from '../../hooks/use-mosaic-environment';
-import { toLocalizableError } from '../../utils/errors';
+import { describeClerkError } from '../clerk/errors';
 import type { ConsentModel } from './consent.types';
 
 const OFFLINE_ACCESS_SCOPE = 'offline_access';
@@ -58,7 +58,7 @@ export function useConsentModel(options: ConsentModelOptions): ConsentModel {
     return { status: 'error', error: { code: 'consent_missing_redirect_uri' } };
   }
   if (error) {
-    return { status: 'error', error: toLocalizableError(error) };
+    return { status: 'error', error: describeClerkError(error) };
   }
   if (isLoading || !data) {
     return { status: 'fetching', renderBranding: environment.displayConfig.branded };

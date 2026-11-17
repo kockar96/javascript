@@ -10,6 +10,10 @@ Mosaic runs Oxlint with stricter rules than the rest of the repo. Lint with `pnp
 - Every disable directive in `src` needs a `-- reason` (`require-description`). Write why the rule does not apply here, not what the code does; it is what a reviewer judges. The reason is not a code comment, so the no-comments rule does not apply to it.
 - This guide does not authorize a suppression. When complexity is inherent, keep the logic together and explain the tradeoff in review.
 
+## When `mosaic/model-callbacks-return-clerk-call` fires
+
+Wrap the callback in `callClerk` and type it as a `ClerkCall`. When the type is not a model callback, such as a view contract a controller fills or a prop the app supplies, disable the rule on that line with the reason (`requests-table-tab.types.ts`). The rule and its reason live in [Models → Errors](models.md#errors).
+
 ## When `sonarjs/cognitive-complexity` fires
 
 The limit (15) flags code worth a second look. It is not a score to game.
